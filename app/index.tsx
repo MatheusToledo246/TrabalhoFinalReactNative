@@ -1,8 +1,8 @@
-import { generateTravelItinerary } from "@/services/ia/generator";
+import { generatorScript } from "@/services/ia/generator";
 import { styles } from "@/styles";
 import { MotiView } from 'moti';
 import React, { useState } from "react";
-import { StatusBar, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { ScrollView, StatusBar, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 export default function Index() {
   const [destination, setDestination] = useState('')
@@ -19,7 +19,7 @@ export default function Index() {
 
     setLoading(true)
     setItinerary('')
-    const result = await generateTravelItinerary(destination);
+    const result = await generatorScript(destination);
     setItinerary(result || "...");
     setLoading(false);
   }
@@ -45,7 +45,9 @@ export default function Index() {
         animate={{ opacity: 1, translateY: 0 }}
         style={styles.card}>
         <Text style={styles.card_title}>Seu roteiro está pronto:</Text>
-        <Text style={styles.card_text}>{itinerary}</Text>
+        <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={true}>
+          <Text style={styles.card_text}>{itinerary}</Text>
+        </ScrollView>
       </MotiView>}
     </View>
   );

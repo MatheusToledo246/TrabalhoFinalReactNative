@@ -57,5 +57,9 @@ export const styles = StyleSheet.create({
     },
     card_text: {
         marginTop: 10
+    },
+    scrollView: {
+        maxHeight: 300,
+        width: '100%'
     }
 })
