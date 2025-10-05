@@ -1,50 +1,145 @@
-# Welcome to your Expo app 👋
+# 🗺️ MT Viagens
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Seu gerador de roteiros de viagens personalizados**
 
-## Get started
+MT Viagens é um aplicativo móvel desenvolvido em React Native que utiliza inteligência artificial para gerar roteiros de viagem personalizados. O usuário simplesmente descreve seu destino ou tipo de viagem desejada e recebe um roteiro completo e detalhado.
 
-1. Install dependencies
+## ✨ Funcionalidades
 
+- 🤖 **IA Integrada**: Utiliza Google Gemini AI para gerar roteiros inteligentes
+- 🎯 **Roteiros Personalizados**: Cada roteiro é único baseado na descrição do usuário
+- 📱 **Interface Intuitiva**: Design clean e fácil de usar
+- 📜 **Visualização Completa**: ScrollView para roteiros longos
+- 🎨 **Animações Suaves**: Transições fluidas com Moti
+- 🌐 **Multiplataforma**: Funciona em Android, iOS e Web
+
+## 🚀 Tecnologias Utilizadas
+
+- **React Native** - Framework principal
+- **Expo** - Plataforma de desenvolvimento
+- **TypeScript** - Tipagem estática
+- **Google Gemini AI** - Inteligência artificial
+- **Moti** - Animações
+- **Expo Router** - Navegação file-based
+
+## 📋 Pré-requisitos
+
+- Node.js (versão 16 ou superior)
+- npm ou yarn
+- Expo CLI
+- Chave da API do Google Gemini
+
+## 🛠️ Instalação
+
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/MatheusToledo246/TrabalhoFinalReactNative.git
+   cd TrabalhoFinalReactNative
+   ```
+
+2. **Instale as dependências**
    ```bash
    npm install
    ```
 
-2. Start the app
+3. **Configure a API Key**
+   - Crie um arquivo `.env` na raiz do projeto
+   - Adicione sua chave da API do Google Gemini:
+   ```env
+   EXPO_PUBLIC_GEMINI_API_KEY=sua_chave_aqui
+   ```
 
+4. **Inicie o projeto**
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+## 📱 Como Usar
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+1. **Abra o aplicativo**
+2. **Descreva sua viagem** no campo de texto (ex: "Viagem para Paris", "Turismo rural no interior")
+3. **Toque em "Gerar roteiro personalizado!"**
+4. **Aguarde a IA processar** sua solicitação
+5. **Visualize seu roteiro** completo no card que aparece
+6. **Role para ver todo o conteúdo** se o roteiro for longo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🎯 Exemplos de Uso
 
-## Get a fresh project
+- "Viagem romântica para Paris de 5 dias"
+- "Turismo de aventura na Chapada Diamantina"
+- "Roteiro gastronômico em São Paulo"
+- "Viagem em família para Disney"
+- "Mochilão pela Europa com orçamento baixo"
 
-When you're ready, run:
+## 📂 Estrutura do Projeto
 
-```bash
-npm run reset-project
+```
+📁 MT-Viagens/
+├── 📁 app/
+│   ├── index.tsx          # Tela principal
+│   └── _layout.tsx        # Layout e navegação
+├── 📁 services/ia/
+│   └── generator.ts       # Serviço de IA
+├── 📁 styles/
+│   └── index.ts          # Estilos globais
+├── 📁 assets/            # Imagens e recursos
+├── package.json          # Dependências
+└── app.json             # Configurações do Expo
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🎨 Design System
 
-## Learn more
+### Paleta de Cores
+- **Primary**: `#4600ebff` (Roxo principal)
+- **Secondary**: `#ee6c02ff` (Laranja de fundo)
+- **Text Light**: `#e2ddddff` (Texto claro)
+- **White**: `#ffffff` (Branco)
+- **Gray**: `#333333` (Cinza escuro)
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🧪 Como Testar
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### No Navegador
+```bash
+npx expo start
+# Pressione 'w' para abrir no navegador
+```
 
-## Join the community
+### No Celular
+1. Instale o **Expo Go** na App Store ou Google Play
+2. Escaneie o QR code que aparece no terminal
+3. O app será carregado automaticamente
 
-Join our community of developers creating universal apps.
+### No Emulador Android
+```bash
+npx expo start
+# Pressione 'a' para abrir no emulador Android
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 🤝 Contribuindo
+
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+
+## 👨‍💻 Autor
+
+**Matheus Toledo**
+- GitHub: [@MatheusToledo246](https://github.com/MatheusToledo246)
+- Projeto: [TrabalhoFinalReactNative](https://github.com/MatheusToledo246/TrabalhoFinalReactNative)
+
+## 📞 Suporte
+
+Se você encontrar algum problema ou tiver sugestões, por favor:
+1. Abra uma [issue](https://github.com/MatheusToledo246/TrabalhoFinalReactNative/issues)
+2. Descreva o problema detalhadamente
+3. Inclua screenshots se necessário
+
+---
+
+**MT Viagens** - Transformando ideias em roteiros incríveis! 🚀✈️
